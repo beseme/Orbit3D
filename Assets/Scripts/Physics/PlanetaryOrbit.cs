@@ -15,7 +15,7 @@ public class PlanetaryOrbit : MonoBehaviour
 
     #region Orbit
     
-    void Update()
+    void FixedUpdate()
     {
         Orbit();
     }
@@ -23,7 +23,7 @@ public class PlanetaryOrbit : MonoBehaviour
     void Orbit()
     {
         this.transform.RotateAround(CenterOfMass.position, Vector3.up,
-            _speed * Time.deltaTime);
+            _speed * Time.fixedDeltaTime);
     }
     
     #endregion

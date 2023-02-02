@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     
     // public members
+    public Transform CenterObject = null;
+    
     public delegate void GameEvent();
     public event GameEvent CenterClicked;
 
