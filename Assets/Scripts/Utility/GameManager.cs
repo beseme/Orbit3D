@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     
     // public members
     public Transform CenterObject = null;
+
+    [HideInInspector] 
+    public float SimulationSpeed = 1f;
     
     public delegate void GameEvent();
     public event GameEvent CenterClicked;

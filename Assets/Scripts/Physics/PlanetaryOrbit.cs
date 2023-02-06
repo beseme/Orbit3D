@@ -17,13 +17,13 @@ public class PlanetaryOrbit : MonoBehaviour
     
     void FixedUpdate()
     {
-        Orbit();
+        _orbit();
     }
 
-    void Orbit()
+    private void _orbit()
     {
         this.transform.RotateAround(CenterOfMass.position, Vector3.up,
-            _speed * Time.fixedDeltaTime);
+            _speed * GameManager.Instance.SimulationSpeed * Time.fixedDeltaTime);
     }
     
     #endregion
